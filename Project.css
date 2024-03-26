@@ -1,0 +1,198 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ }
+
+/* Style the header and navbar */
+header {
+  background-color: #f2f2f2;
+  padding: 20px 0;
+  text-align: center;
+}
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-links a:before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #333;
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff6f61;
+}
+
+.nav-links a:hover:before {
+  transform: scaleX(1);
+}
+
+.nav-links a:visited {
+  color: #8c8c8c;
+}
+
+/* Style the services section */
+#services {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.service {
+  margin-bottom: 30px;
+}
+h2  {
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 40px;
+  letter-spacing: 2px;
+  font-style: oblique;
+  font-variant: small-caps;
+}
+.service h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.service ul {
+  list-style: none;
+}
+
+.service ul li {
+  margin: 5px 0;
+}
+
+.testimonial {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #333;
+  
+}
+
+.testimonial p {
+  margin-bottom: 10px;
+}
+
+.testimonial .customer-name {
+  font-style: italic;
+  text-align: right;
+  color: #fffafa;
+}
+
+/* Style the footer */
+footer {
+ 
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.contact, .follow, .about {
+  margin-bottom: 20px;
+}
+
+.contact h3, .follow h3, .about h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.contact p, .follow ul, .about p {
+  margin: 5px 0;
+}
+
+/* Responsive CSS using media queries */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+}
+/* Media query for responsive images */
+img {
+  max-width: 30%; /* Ensure images are responsive within their containers */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 3px;
+}
+
+/* Responsive CSS using media queries */
+@media (max-width: 768px) {
+  /* Adjust image sizes for smaller screens */
+  img {
+    width: 100%; /* Make images fill their containers */
+  }
+}
+/* Media query for mobile responsiveness */
+@media only screen and (max-width: 600px) {
+  h2 {
+    font-size: 24px; /* Adjust font size for smaller screens */
+  }
+}
+
+
+/* Styles for the image container using Flexbox */
+.image-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.flex-item {
+  flex: 1;
+  max-width: 40%;
+  margin: 10px;
+  border: 2px solid #ccc; /* Add a 2px solid border with a light gray color */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+/* Add hover effect for the images */
+.flex-item:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive design using media queries */
+@media (max-width: 768px) {
+  .flex-item {
+    flex: 1 0 100%;
+  }
+}
